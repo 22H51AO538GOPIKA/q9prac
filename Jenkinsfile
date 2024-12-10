@@ -2,13 +2,23 @@ pipeline{
     agent any
     stages{
         stage('build'){
-            bat 'docker build my-todo-app .'
+          steps{
+
+           bat 'docker build my-todo-app .'
+          }
         }
         stage('run'){
-            echo 'runnn'
+            
+            steps{
+                echo 'runnn'
+        }
         }
         stage('deploy'){
+          steps{
+
+          
             echo 'deploy'
+          }
         }
     }
 }
