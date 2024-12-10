@@ -4,7 +4,7 @@ pipeline{
         stage('build'){
           steps{
 
-           bat 'docker build my-todo-app .'
+           bat 'docker build -t my-todo-app .'
           }
         }
         stage('run'){
